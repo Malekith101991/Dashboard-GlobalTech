@@ -1,23 +1,24 @@
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import Users from "./pages/Users"
-import './assets/css/app.css';
-import SideBar from "./components/SideBar";
+import Home from "./components/Home";
+import Products from "./components/Products";
 
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-
+import "./App.css";
+import Categories from "./components/Categories";
 
 function App() {
   return (
-    
     <div className="App">
-      <SideBar />
-      <h1>Welcome to GlobalTech</h1>
+
+
+      <Link to='/'>Inicio</Link>
+      <Link to='/products'>Productos</Link>
+      <Link to='/categories'>Categorias</Link>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </div>
   );
